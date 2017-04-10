@@ -1,0 +1,27 @@
+[
+  {
+    "id": "sAfj0vZwS",
+    "name": "Scenario",
+    "properties": {
+      "id": "7aeb736a-c57e-4486-a97c-d353a24f6261",
+      "userfieldGuid": "7aeb736a-c57e-4486-a97c-d353a24f6261",
+      "designMode": false,
+      "type": "userfield",
+      "control": "MaskTextBox",
+      "extendedData": "",
+      "displayName": "CPF:",
+      "visible": true,
+      "editable": true,
+      "required": true,
+      "displayType": "value",
+      "labelAlign": "10",
+      "valueAlign": "10",
+      "labelWidth": 126,
+      "valueWidth": 196,
+      "xpath": "widget.property518",
+      "value": "123654",
+      "Mask": "000.000.000-00",
+      "Label": "FVoYYBkWk"
+    }
+  }
+]

@@ -1,0 +1,68 @@
+<html>
+<script type='text/javascript' src="rendering.desktop.production.js"></script>
+<script type='text/javascript' src="jquery.mask.js"></script>
+
+        <script type='text/javascript'>
+            var objBz = {
+                properties: {
+                    value: "",
+                    Mask: "000.000.000-00",
+                    displayName: "CPF",
+                    editable:true,
+                },
+                getControl: function(){},
+    getGenericControl: function () {
+
+        //standard initialization
+        var self = this;
+        var control = self.getControl();
+        var properties = self.properties;
+        var extendedData = self.extendedData;
+
+        var editableInput =  self.properties.editable === undefined ? true : Boolean(self.properties.editable);
+        
+        var bindedXpathValue =  properties.value || "";
+        var mascara = properties.Mask || "000.000.000-00";
+
+        self.myinput =  $("<div width='100%'/>"); 
+        self.myinput.addClass("W008_mainDiv");
+        
+       
+            
+        var toL = $("<div><b>" + properties.displayName + "</b></div>");
+		toL.addClass("W008_fromDiv");
+        var SpanResult = $("<input type='text' id='masktextfld' name='field-name' data-mask='"+ mascara +"'  />");
+				
+        if(!editableInput)
+		{
+            SpanResult = $("<input  readOnly='readOnly'/>");
+		}	
+        SpanResult.addClass("W008_spanResultClass");
+        //setTimeout( function(){  $("#masktextfld").mask(mascara, { reverse: true });  }  ,1000);
+        SpanResult.mask(mascara);
+        
+        SpanResult.val(bindedXpathValue);
+        self.myinput.myinitial = SpanResult;						
+        self.myinput.myresult = SpanResult;
+        SpanResult.appendTo(toL);				
+				
+        toL.appendTo(self.myinput);
+
+        self.myinput.addClass("MaskTextBox_MainDivClass");
+
+        return self.myinput;
+    }
+    };
+
+    function addGraph()
+    {
+        $('#chart_div').append(objBz.getGenericControl());
+      
+    }
+</script>
+<body>
+ <input id="jdata" />
+        <button onclick="addGraph()">Monta input</button>
+          <div id='chart_div' class='minhaDIV'></div>
+</body>
+</html>

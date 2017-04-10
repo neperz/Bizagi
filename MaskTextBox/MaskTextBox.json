@@ -1,0 +1,504 @@
+{
+  "name": "MaskTextBox",
+  "guid": "7aeb736a-c57e-4486-a97c-d353a24f6261",
+  "display": {
+    "default": "MaskTextBox",
+    "languages": [
+      {
+        "en": "MaskTextBox"
+      }
+    ]
+  },
+  "type": "userfield",
+  "rendertype": "userfield",
+  "design": {
+    "properties": {
+      "helptext": {
+        "bas-type": "localizable-string",
+        "caption": {
+          "default": "Help text",
+          "languages": [
+            {
+              "es": "Texto de ayuda"
+            }
+          ]
+        }
+      },
+      "visible": {
+        "bas-type": "rule-expression",
+        "caption": {
+          "default": "Visible"
+        },
+        "editor-parameters": {
+          "type": "boolean"
+        },
+        "default": {
+          "fixedvalue": "true"
+        },
+        "required": true,
+        "subproperties": {
+          "fixedvalue": {
+            "bas-type": "boolean"
+          },
+          "rule": {
+            "bas-type": "rule"
+          }
+        }
+      },
+      "editable": {
+        "bas-type": "rule-expression",
+        "caption": {
+          "default": "Editable"
+        },
+        "editor-parameters": {
+          "type": "boolean"
+        },
+        "default": {
+          "fixedvalue": "true"
+        },
+        "required": true,
+        "subproperties": {
+          "fixedvalue": {
+            "bas-type": "boolean"
+          },
+          "rule": {
+            "bas-type": "rule"
+          }
+        }
+      },
+      "required": {
+        "bas-type": "rule-expression",
+        "caption": {
+          "default": "Required",
+          "languages": [
+            {
+              "es": "Requerido"
+            }
+          ]
+        },
+        "editor-parameters": {
+          "type": "boolean"
+        },
+        "default": {
+          "fixedvalue": "false"
+        },
+        "required": true,
+        "subproperties": {
+          "fixedvalue": {
+            "bas-type": "boolean"
+          },
+          "rule": {
+            "bas-type": "rule"
+          }
+        }
+      },
+      "displaytype": {
+        "bas-type": "display-type",
+        "caption": {
+          "default": "Display Type",
+          "languages": [
+            {
+              "es": "Tipo de display"
+            }
+          ]
+        }
+      },
+      "labelalign": {
+        "bas-type": "horizontal-align",
+        "caption": {
+          "default": "Label Horizontal Align",
+          "languages": [
+            {
+              "es": "Etiqueta Alin. Horizontal"
+            }
+          ]
+        },
+        "default": "default"
+      },
+      "valuealign": {
+        "bas-type": "horizontal-align",
+        "caption": {
+          "default": "Value Horizontal Align",
+          "languages": [
+            {
+              "es": "Valor Alin. Horizontal"
+            }
+          ]
+        },
+        "default": "default"
+      },
+      "layout": {
+        "bas-type": "render-layout",
+        "editor-parameters": {
+          "elements": [
+            {
+              "name": "label",
+              "caption": "label",
+              "default": 50
+            },
+            {
+              "name": "value",
+              "caption": "value",
+              "default": 50
+            }
+          ]
+        },
+        "subproperties": {
+          "labelwidth": {
+            "bas-type": "int",
+            "caption": {
+              "default": "Label width",
+              "languages": [
+                {
+                  "es": "Ancho Etiqueta"
+                }
+              ]
+            },
+            "metavalue": "<design:layout:label>",
+            "default": 50
+          },
+          "valuewidth": {
+            "bas-type": "int",
+            "caption": {
+              "default": "Control width",
+              "languages": [
+                {
+                  "es": "Ancho Control"
+                }
+              ]
+            },
+            "metavalue": "<design:layout:value>",
+            "default": 50
+          }
+        }
+      },
+      "xpath": {
+        "bas-type": "xpath-to-simple",
+        "caption": {
+          "default": "Data Binding",
+          "languages": [
+            {
+              "es": "Mapeo de datos"
+            }
+          ]
+        },
+        "required": true,
+        "main": true,
+        "editor-parameters": {
+          "types": [
+            "string"
+          ]
+        },
+        "subproperties": {
+          "xpath": {
+            "bas-type": "xpath"
+          }
+        }
+      },
+      "xpathDefault": {
+        "bas-type": "defaultvalue",
+        "editor-parameters": {
+          "type": "string",
+          "exclusive": true
+        },
+        "caption": {
+          "default": "Default value",
+          "languages": [
+            {
+              "es": "Valor por defecto"
+            }
+          ]
+        },
+        "subproperties": {
+          "fixedvalue": {
+            "bas-type": "string",
+            "caption": {
+              "default": "Fixed",
+              "languages": [
+                {
+                  "es": "Fijo"
+                }
+              ]
+            }
+          },
+          "rule": {
+            "bas-type": "rule",
+            "caption": {
+              "default": "Rule",
+              "languages": [
+                {
+                  "es": "Regla"
+                }
+              ]
+            }
+          },
+          "rule90": {
+            "bas-type": "rule",
+            "caption": {
+              "default": "Rule",
+              "languages": [
+                {
+                  "es": "Regla"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "Mask": {
+        "bas-type": "localizable-string",
+        "caption": {
+          "default": "Mask",
+          "languages": [
+            {
+              "en": "Mask"
+            }
+          ]
+        },
+        "required": true
+      },
+      "displayName": {
+        "bas-type": "localizable-string",
+        "caption": {
+          "default": "Display Text",
+          "languages": [
+            {
+              "en": "Display Text"
+            }
+          ]
+        }
+      },
+      "Label": {
+        "bas-type": "localizable-string",
+        "caption": {
+          "default": "Label",
+          "languages": [
+            {
+              "en": "Label"
+            }
+          ]
+        },
+        "required": true
+      }
+    },
+    "visual": {
+      "controls-navigator": {
+        "group": {
+          "default": "Controls",
+          "languages": [
+            {
+              "en": "Controls"
+            }
+          ]
+        }
+      },
+      "ribbon": {},
+      "context-menu": {},
+      "property-box": {
+        "tabs": [
+          {
+            "id": "basic",
+            "caption": {
+              "default": "Basic",
+              "languages": []
+            },
+            "elements": [
+              {
+                "type": "property",
+                "value": "xpath"
+              },
+              {
+                "type": "property",
+                "value": "xpathDefault"
+              },
+              {
+                "type": "property",
+                "value": "visible"
+              },
+              {
+                "type": "property",
+                "value": "editable"
+              },
+              {
+                "type": "property",
+                "value": "required"
+              },
+              {
+                "type": "property",
+                "value": "Mask"
+              },
+              {
+                "type": "property",
+                "value": "Label"
+              }
+            ]
+          },
+          {
+            "id": "new1491706625178",
+            "caption": {
+              "default": "Data",
+              "languajes": []
+            },
+            "elements": [
+              {
+                "type": "group",
+                "caption": {
+                  "default": "Binding"
+                },
+                "elements": []
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "properties": [
+      {
+        "name": "userfieldGuid",
+        "type": "string",
+        "metavalue": "7aeb736a-c57e-4486-a97c-d353a24f6261",
+        "designvalue": "7aeb736a-c57e-4486-a97c-d353a24f6261"
+      },
+      {
+        "name": "designMode",
+        "type": "boolean",
+        "metavalue": "false",
+        "designvalue": "true"
+      },
+      {
+        "name": "type",
+        "type": "string",
+        "metavalue": "userfield",
+        "designvalue": "userfield"
+      },
+      {
+        "name": "control",
+        "type": "string",
+        "metavalue": "MaskTextBox",
+        "designvalue": "MaskTextBox"
+      },
+      {
+        "name": "extendedData",
+        "type": "string",
+        "metavalue": "",
+        "designvalue": ""
+      },
+      {
+        "name": "visible",
+        "type": "boolean",
+        "metavalue": "<design:visible:fixedvalue>",
+        "depends": "<design:visible:fixedvalue>",
+        "designvalue": "<design:visible:fixedvalue>"
+      },
+      {
+        "name": "visible",
+        "type": "rule",
+        "metavalue": "<design:visible:rule>",
+        "depends": "<design:visible:rule>"
+      },
+      {
+        "name": "editable",
+        "type": "boolean",
+        "metavalue": "<design:editable:fixedvalue>",
+        "depends": "<design:editable:fixedvalue>",
+        "designvalue": "<design:editable:fixedvalue>"
+      },
+      {
+        "name": "editable",
+        "type": "rule",
+        "metavalue": "<design:editable:rule>",
+        "depends": "<design:editable:rule>"
+      },
+      {
+        "name": "required",
+        "type": "boolean",
+        "metavalue": "<design:required:fixedvalue>",
+        "depends": "<design:required:fixedvalue>",
+        "designvalue": "<design:required:fixedvalue>"
+      },
+      {
+        "name": "required",
+        "type": "rule",
+        "metavalue": "<design:required:rule>",
+        "depends": "<design:required:rule>"
+      },
+      {
+        "name": "displayType",
+        "type": "string",
+        "metavalue": "value",
+        "designvalue": "value"
+      },
+      {
+        "name": "labelAlign",
+        "type": "string",
+        "metavalue": "<design:labelalign>",
+        "depends": "<design:labelalign>"
+      },
+      {
+        "name": "valueAlign",
+        "type": "string",
+        "metavalue": "<design:valuealign>",
+        "depends": "<design:valuealign>"
+      },
+      {
+        "name": "labelWidth",
+        "type": "int",
+        "metavalue": "<design:layout:labelwidth>",
+        "depends": "<design:layout:labelwidth>",
+        "designvalue": "<design:layout:labelwidth>"
+      },
+      {
+        "name": "valueWidth",
+        "type": "int",
+        "metavalue": "<design:layout:valuewidth>",
+        "depends": "<design:layout:valuewidth>",
+        "designvalue": "<design:layout:valuewidth>"
+      },
+      {
+        "name": "xpath",
+        "type": "xpath",
+        "metavalue": "<design:xpath:xpath>"
+      },
+      {
+        "name": "value",
+        "type": "xpath-value",
+        "metavalue": "<decision-table:dt-xpath-value>"
+      },
+      {
+        "name": "Mask",
+        "type": "lstring",
+        "metavalue": "<design:Mask>",
+        "depends": "<design:Mask>",
+        "designvalue": "<design:Mask>"
+      },
+      {
+        "name": "displayName",
+        "type": "lstring",
+        "metavalue": "<design:displayName>",
+        "depends": "<design:displayName>",
+        "designvalue": "<design:displayName>"
+      },
+      {
+        "name": "Label",
+        "type": "lstring",
+        "metavalue": "<design:Label>",
+        "depends": "<design:Label>",
+        "designvalue": "<design:Label>"
+      }
+    ],
+    "decision-table": [
+      {
+        "name": "dt-xpath-value",
+        "decision-table": "xpath-value",
+        "parameters": {
+          "xpath": "<design:xpath:xpath>",
+          "fixed": "<design:xpathDefault:fixedvalue>",
+          "rule": "<design:xpathDefault:rule>"
+        }
+      }
+    ],
+    "decision-tables-overrides": []
+  }
+}
